@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Spawner : MonoBehaviour
+{
+       
+    public Transform spawnPos; // stan spawnowania 
+    public GameObject obj; // obiekt spawnowany
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {               //<obiekt>,    <position>   ,<rotation> +https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
+            Instantiate(obj, spawnPos.position,spawnPos.rotation);
+        }
+    }
+}
